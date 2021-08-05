@@ -1,4 +1,4 @@
-package com.example.airhockey
+package com.airhockey.android
 
 import android.app.ActivityManager
 import android.content.Context
@@ -20,7 +20,7 @@ class AirHockeyActivity : AppCompatActivity() {
         val supportsEs2 = configurationInfo.reqGlEsVersion >= 0x20000
         if (supportsEs2) {
             glSurfaceView.setEGLContextClientVersion(2)
-            glSurfaceView.setRenderer(AirHockeyRenderer())
+            glSurfaceView.setRenderer(AirHockeyRenderer(this))
             rendererSet = true
         } else {
             Toast.makeText(

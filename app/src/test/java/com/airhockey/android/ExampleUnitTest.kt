@@ -1,4 +1,4 @@
-package com.example.airhockey
+package com.airhockey.android
 
 import org.junit.Test
 
